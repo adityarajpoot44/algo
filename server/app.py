@@ -100,8 +100,7 @@ async def fetch_market_data(session, symbol):
 # ✅ Fetch Data for All Coins
 async def fetch_all_market():
     coins = [
-        "BTCUSDT", "ETHUSDT", "EURUSDT", "GBPUSDT", "USDJPY", "USDCAD", "AUDUSD", "USDCHF",
-    "NZDUSD", "EURGBP", "EURJPY", "GBPJPY", "AUDJPY"
+        "BTCUSDT", "ETHUSDT"
     ]
 
     async with aiohttp.ClientSession() as session:
@@ -120,7 +119,7 @@ async def run_scheduler():
     while True:
         await fetch_all_market()
         print("✅ One Minute Completed")
-        await asyncio.sleep(5)
+        await asyncio.sleep(60)
 
 # ✅ FastAPI Integration (If Needed)
 from fastapi import FastAPI
