@@ -100,11 +100,8 @@ async def fetch_market_data(session, symbol):
 # ✅ Fetch Data for All Coins
 async def fetch_all_market():
     coins = [
-        "BTCUSDT", "ETHUSDT", "BNBUSDT", "DOGEUSDT", "XRPUSDT", "SOLUSDT", "MATICUSDT", "ADAUSDT",
-        "DOTUSDT", "SHIBUSDT", "LTCUSDT", "AVAXUSDT", "LINKUSDT", "TRXUSDT", "ATOMUSDT", "UNIUSDT",
-        "BCHUSDT", "APTUSDT", "OPUSDT", "FILUSDT", "LDOUSDT", "AAVEUSDT", "GRTUSDT", "NEARUSDT",
-        "FTMUSDT", "VETUSDT", "MANAUSDT", "SANDUSDT", "ALGOUSDT", "AXSUSDT", "ICPUSDT", "APEUSDT",
-        "QNTUSDT", "WAVESUSDT", "XTZUSDT", "RNDRUSDT", "FLOWUSDT", "ENSUSDT", "RLCUSDT", "IMXUSDT"
+        "BTCUSDT", "ETHUSDT", "EURUSDT", "GBPUSDT", "USDJPY", "USDCAD", "AUDUSD", "USDCHF",
+    "NZDUSD", "EURGBP", "EURJPY", "GBPJPY", "AUDJPY"
     ]
 
     async with aiohttp.ClientSession() as session:
