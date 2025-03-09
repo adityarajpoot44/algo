@@ -120,7 +120,7 @@ async def run_scheduler():
     while True:
         await fetch_all_market()
         print("✅ One Minute Completed")
-        await asyncio.sleep(60)
+        await asyncio.sleep(5)
 
 # ✅ FastAPI Integration (If Needed)
 from fastapi import FastAPI
@@ -134,7 +134,7 @@ async def lifespan(app: FastAPI):
 
 app = FastAPI(lifespan=lifespan)
 
-@app.get("/")
+@app.get("/", methods=["GET", "HEAD"])
 async def home():
     return {"message": "Crypto Data Collection System Running 🚀"}
 
