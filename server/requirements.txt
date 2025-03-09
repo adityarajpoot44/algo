@@ -1,2 +1,8 @@
-
-pip install uvicorn
+fastapi
+uvicorn
+aiohttp
+asyncpg
+psycopg2-binary
+numpy
+pandas
+python-dotenv
