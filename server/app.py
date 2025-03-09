@@ -134,7 +134,7 @@ async def lifespan(app: FastAPI):
 
 app = FastAPI(lifespan=lifespan)
 
-@app.get("/", methods=["GET", "HEAD"])
+@app.api_route("/", methods=["GET", "POST"])
 async def home():
     return {"message": "Crypto Data Collection System Running 🚀"}
 
